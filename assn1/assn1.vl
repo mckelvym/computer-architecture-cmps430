@@ -1,0 +1,40 @@
+// Class    : CMPS 430
+// Section  : 001
+// Problem  : Assignment #1
+// Name     : McKelvy, James Markus
+// CLID     : jmm0468
+
+// This is my first Verilog Module
+// Listing 1: Simple Verilog Code
+// Verilog Tutorial UCLA
+
+module top();
+ wire out;
+ reg a, b;
+
+ assign out = a & b;
+
+ initial
+  begin
+   a = 1'b0;
+   b = 1'b0;
+   #10;
+   a = 1'b0;
+   b = 1'b1;
+   #10;
+   a = 1'b1;
+   b = 1'b1;
+   #10;
+   a = 1'b1;
+   b = 1'b0;
+   #10;
+   $dumpflush;
+  end
+ 
+ initial
+  begin
+   $monitor("a=%b, b=%b,out=%b,time=%t\n", a, b, out, $time);
+   $dumpfile("top.dump");
+   $dumpvars(5, top);
+  end
+endmodule
