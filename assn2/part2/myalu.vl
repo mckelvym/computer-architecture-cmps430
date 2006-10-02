@@ -1,0 +1,46 @@
+// Class    : CMPS 430
+// Section  : 001
+// Problem  : Assignment #2
+// Name     : McKelvy, James Markus
+// CLID     : jmm0468
+
+// first simple ALU CMPS 430 (UG) Fall 2006 – P2 (Problem 2)
+// The inputs to the module are two 8-bit numbers, and also a 3-bit number
+// Based on the ControlCode, the module performs operations
+
+// The name of the file containing this code is MYALU.vl
+
+module MYALU(A, B, cc, out);
+
+// declare 8bit for the first input
+input [7:0] A;
+// declare 8bit for the second input
+input [7:0] B;
+// declare 3bit for the control code
+input [2:0] cc;
+// declare 8bit for the output
+output [7:0] out;
+reg [7:0] out;
+
+// reevaluate if A,B, or cc changes
+// cc is control code
+always @(A, B, cc)
+begin
+// do the or operation
+if(cc == 3'b000)
+ out = A | B;
+// negate operands then do or
+else if (cc == 3'b001)
+ out = (~A) | (~B);
+// do the and operation
+else if (cc == 3'b010)
+ out = A & B;
+// do the xor operation
+else if (cc == 3'b011)
+ out = A ^ B;
+else 
+// display invalid message
+ $display("invalid input for control signal");
+end
+
+endmodule

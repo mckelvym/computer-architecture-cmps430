@@ -1,0 +1,62 @@
+// Class    : CMPS 430
+// Section  : 001
+// Problem  : Assignment #2
+// Name     : McKelvy, James Markus
+// CLID     : jmm0468
+
+// 4-bit Full Adder CMPS 430 (UG) Fall 2006 – P2 (Problem 1)
+// The name of the file containing this code is Top.vl
+
+module top();
+
+reg [3:0] Ain;
+reg [3:0] Bin;
+reg  CarryIn;
+
+wire [3:0] SumOut;
+wire  c1, c2, c3, CarryOut;
+
+OneBitFullAdder FBA0(Ain[0], Bin[0], CarryIn, SumOut[0], c1);
+OneBitFullAdder FBA1(Ain[1], Bin[1], c1, SumOut[1], c2);
+OneBitFullAdder FBA2(Ain[2], Bin[2], c2, SumOut[2], c3);
+OneBitFullAdder FBA3(Ain[3], Bin[3], c3, SumOut[3], CarryOut);
+
+
+initial
+	begin
+		Ain = 4'b1000;
+		Bin = 4'b0001;
+		CarryIn = 1'b0;
+		
+		#10;
+		Ain = 4'b1000;
+		Bin = 4'b0001;
+		CarryIn = 1'b0;
+		
+		#10;
+		Ain = 4'b1111;
+		Bin = 4'b1111;
+		CarryIn = 1'b1;
+
+		#10;
+		Ain = 4'b1001;
+		Bin = 4'b1011;
+		CarryIn = 1'b1;
+		
+ // you must do more assignments to test your adder better !!
+
+		#10;
+		$dumpflush;
+	end
+
+
+initial
+	begin
+	$monitor("Ain=%4b, Bin=%4b, Carryin=%b, SumOut=%4b, CarryOut=%b, time=%t\n", Ain, Bin, CarryIn, SumOut, CarryOut, $time);
+	$dumpfile("top.dump");
+	$dumpvars(5, top);
+end
+
+
+
+endmodule

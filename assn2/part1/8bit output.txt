@@ -1,0 +1,50 @@
+// Class    : CMPS 430
+// Section  : 001
+// Problem  : Assignment #2
+// Name     : McKelvy, James Markus
+// CLID     : jmm0468
+
+C:\iverilog\bin>iverilog -o 8bit 8bit.vl OneBitFullAdder.vl
+
+C:\iverilog\bin>vvp 8bit
+VCD info: dumpfile top.dump opened for output.
+A=10000000, B=00000001, cin=0, Sum=10000001, c7=0, time=                   0
+
+A=10000000, B=00000001, cin=1, Sum=10000010, c7=0, time=                  10
+
+A=10000001, B=00000001, cin=0, Sum=10000010, c7=0, time=                  20
+
+A=10000001, B=00000001, cin=1, Sum=10000011, c7=0, time=                  30
+
+A=00001111, B=00001111, cin=0, Sum=00011110, c7=0, time=                  40
+
+A=00001111, B=00001111, cin=1, Sum=00011111, c7=0, time=                  50
+
+A=00001001, B=00001011, cin=0, Sum=00010100, c7=0, time=                  60
+
+A=00001001, B=00001011, cin=1, Sum=00010101, c7=0, time=                  70
+
+A=10101001, B=00101011, cin=0, Sum=11010100, c7=0, time=                  80
+
+A=10101001, B=00101011, cin=1, Sum=11010101, c7=0, time=                  90
+
+A=10101001, B=10101011, cin=0, Sum=01010100, c7=1, time=                 100
+
+A=10101001, B=10101011, cin=1, Sum=01010101, c7=1, time=                 110
+
+A=10101101, B=10111011, cin=0, Sum=01101000, c7=1, time=                 120
+
+A=10101101, B=10111011, cin=1, Sum=01101001, c7=1, time=                 130
+
+A=00000001, B=11111110, cin=0, Sum=11111111, c7=0, time=                 140
+
+A=00000001, B=11111110, cin=1, Sum=00000000, c7=1, time=                 150
+
+A=00000001, B=11111111, cin=1, Sum=00000001, c7=1, time=                 160
+
+A=11111111, B=11111111, cin=0, Sum=11111110, c7=1, time=                 170
+
+A=11111111, B=11111111, cin=1, Sum=11111111, c7=1, time=                 180
+
+
+C:\iverilog\bin>

@@ -1,0 +1,150 @@
+// Class    : CMPS 430
+// Section  : 001
+// Problem  : Assignment #2
+// Name     : McKelvy, James Markus
+// CLID     : jmm0468
+
+// 8-bit Full Adder CMPS 430 (UG) Fall 2006 – P2 (Problem 1)
+// The name of the file containing this code is 8bit.vl
+
+module top();
+
+// declare an 8bit register for a
+reg [7:0] A;
+// declare an 8bit register for b
+reg [7:0] B;
+// declar a register for input, carry in
+reg cin;
+
+// declare a wire for the 8bits of the sum
+wire [7:0] Sum;
+// declare intermediate carryouts
+wire c0, c1, c2, c3, c4, c5, c6, c7;
+
+// create a series of adders, linking them together using
+// the carryout variables
+// the sum bit will be stored in the corresponding location
+// in the Sum wire variable
+// c7 is the carryout for the entire 8-bit full adder
+OneBitFullAdder FBA0(A[0], B[0], cin, Sum[0], c0);
+OneBitFullAdder FBA1(A[1], B[1], c0, Sum[1], c1);
+OneBitFullAdder FBA2(A[2], B[2], c1, Sum[2], c2);
+OneBitFullAdder FBA3(A[3], B[3], c2, Sum[3], c3);
+OneBitFullAdder FBA4(A[4], B[4], c3, Sum[4], c4);
+OneBitFullAdder FBA5(A[5], B[5], c4, Sum[5], c5);
+OneBitFullAdder FBA6(A[6], B[6], c5, Sum[6], c6);
+OneBitFullAdder FBA7(A[7], B[7], c6, Sum[7], c7);
+
+initial
+	begin
+	// declare a series of tests for the adder
+
+	A = 8'b10000000;
+	B = 8'b00000001;
+	cin = 1'b0;
+	
+	#10;
+	A = 8'b10000000;
+	B = 8'b00000001;
+	cin = 1'b1;
+	
+	#10;
+	A = 8'b10000001;
+	B = 8'b00000001;
+	cin = 1'b0;
+	
+	#10;
+	A = 8'b10000001;
+	B = 8'b00000001;
+	cin = 1'b1;
+	
+	#10;
+	A = 8'b00001111;
+	B = 8'b00001111;
+	cin = 1'b0;
+
+	#10;
+	A = 8'b00001111;
+	B = 8'b00001111;
+	cin = 1'b1;
+
+	#10;
+	A = 8'b00001001;
+	B = 8'b00001011;
+	cin = 1'b0;
+
+	#10;
+	A = 8'b00001001;
+	B = 8'b00001011;
+	cin = 1'b1;
+
+	#10;
+	A = 8'b10101001;
+	B = 8'b00101011;
+	cin = 1'b0;
+		
+	#10;
+	A = 8'b10101001;
+	B = 8'b00101011;
+	cin = 1'b1;
+
+	#10;
+	A = 8'b10101001;
+	B = 8'b10101011;
+	cin = 1'b0;
+
+	#10;
+	A = 8'b10101001;
+	B = 8'b10101011;
+	cin = 1'b1;
+
+	#10;
+	A = 8'b10101101;
+	B = 8'b10111011;
+	cin = 1'b0;
+
+	#10;
+	A = 8'b10101101;
+	B = 8'b10111011;
+	cin = 1'b1;
+
+	#10;
+	A = 8'b00000001;
+	B = 8'b11111110;
+	cin = 1'b0;
+
+	#10;
+	A = 8'b00000001;
+	B = 8'b11111110;
+	cin = 1'b1;
+
+	#10;
+	A = 8'b00000001;
+	B = 8'b11111111;
+	cin = 1'b1;
+
+	#10;
+	A = 8'b11111111;
+	B = 8'b11111111;
+	cin = 1'b0;
+
+	#10;
+	A = 8'b11111111;
+	B = 8'b11111111;
+	cin = 1'b1;
+
+ 	// you must do more assignments to test your adder better !!
+
+	#10;
+	$dumpflush;
+end
+
+initial
+	begin
+	// output the results to the monitor
+	$monitor("A=%8b, B=%8b, cin=%b, Sum=%8b, c7=%b, time=%t\n", A, B, cin, Sum, c7, $time);
+	$dumpfile("top.dump");
+	$dumpvars(5, top);
+end
+
+endmodule

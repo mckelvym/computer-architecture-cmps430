@@ -1,0 +1,37 @@
+// Class    : CMPS 430
+// Section  : 001
+// Problem  : Assignment #2
+// Name     : McKelvy, James Markus
+// CLID     : jmm0468
+
+Microsoft Windows XP [Version 5.1.2600]
+(C) Copyright 1985-2001 Microsoft Corp.
+
+C:\Documents and Settings\Markus>cd c:\iverilog\bin
+
+C:\iverilog\bin>vvp alu
+A=10000000, B=00000001, cc=000, out=10000001, time=                   0
+
+A=10010000, B=10001001, cc=000, out=10011001, time=                  10
+
+A=10010000, B=10001001, cc=001, out=01111111, time=                  20
+
+A=10000000, B=00000001, cc=001, out=11111111, time=                  30
+
+A=10000000, B=00000001, cc=010, out=00000000, time=                  40
+
+A=10000000, B=11000001, cc=010, out=10000000, time=                  50
+
+A=10001110, B=11001111, cc=010, out=10001110, time=                  60
+
+A=10001110, B=11001111, cc=011, out=01000001, time=                  70
+
+A=10000000, B=00000001, cc=011, out=10000001, time=                  80
+
+A=10000001, B=10000001, cc=011, out=00000000, time=                  90
+
+invalid input for control signal
+A=10000001, B=10000001, cc=111, out=00000000, time=                 100
+
+
+C:\iverilog\bin>
