@@ -1,0 +1,516 @@
+$date
+	Wed Nov 29 09:40:56 2006
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1s
+$end
+$scope module Top $end
+$var wire 2 ! ew_light[1:0] $end
+$var wire 2 " ns_light[1:0] $end
+$var wire 3 # state[2:0] $end
+$var reg 1 $ cars $end
+$var reg 1 % speeder $end
+$var reg 1 & speeder_ew $end
+$var reg 1 ' speeder_ns $end
+$var reg 1 ( switch $end
+$scope module myfsm $end
+$var wire 1 ( switch $end
+$var reg 2 ) ew_light[1:0] $end
+$var reg 2 * ns_light[1:0] $end
+$var reg 3 + state[2:0] $end
+$var reg 2 , tempew[1:0] $end
+$var reg 2 - tempns[1:0] $end
+$scope begin next_state_switcher $end
+$var wire 3 . state1[2:0] $end
+$var wire 3 / state2[2:0] $end
+$var wire 3 0 state3[2:0] $end
+$var wire 3 1 state4[2:0] $end
+$var wire 3 2 state5[2:0] $end
+$var wire 3 3 state0[2:0] $end
+$upscope $end
+$upscope $end
+$scope begin clock $end
+$upscope $end
+$scope begin reset_speeder $end
+$upscope $end
+$scope begin cars_sensor $end
+$upscope $end
+$scope begin speeder_on_ew $end
+$upscope $end
+$scope begin speeder_on_ns $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+b0 3
+b101 2
+b100 1
+b11 0
+b10 /
+b1 .
+b0 -
+b10 ,
+b1 +
+b0 *
+b10 )
+0(
+0'
+0&
+0%
+0$
+b1 #
+b0 "
+b10 !
+$end
+#31
+1%
+1'
+#35
+b1 !
+b1 )
+b1 ,
+b10 #
+b10 +
+0%
+1(
+1$
+#55
+b0 !
+b0 )
+b0 ,
+b11 #
+b11 +
+0(
+#62
+0'
+#63
+b10 "
+b10 *
+b10 -
+b100 #
+b100 +
+0%
+1(
+1&
+#70
+0$
+#93
+1'
+#105
+b1 "
+b1 *
+b1 -
+b101 #
+b101 +
+0(
+1$
+#124
+0'
+#125
+b0 "
+b0 *
+b0 -
+b0 #
+b0 +
+1(
+#126
+0&
+#133
+b10 !
+b10 )
+b10 ,
+b1 #
+b1 +
+0(
+#140
+0$
+#155
+1%
+1'
+#175
+b1 !
+b1 )
+b1 ,
+b10 #
+b10 +
+0%
+1(
+1$
+#186
+0'
+#189
+1&
+#195
+b0 !
+b0 )
+b0 ,
+b11 #
+b11 +
+0(
+#203
+b10 "
+b10 *
+b10 -
+b100 #
+b100 +
+1(
+#210
+0$
+#217
+1'
+#245
+b1 "
+b1 *
+b1 -
+b101 #
+b101 +
+0(
+1$
+#248
+0'
+#252
+0&
+#265
+b0 "
+b0 *
+b0 -
+b0 #
+b0 +
+1(
+#273
+b10 !
+b10 )
+b10 ,
+b1 #
+b1 +
+0(
+#279
+1%
+1'
+#280
+0$
+#310
+0'
+#315
+b1 !
+b1 )
+b1 ,
+b10 #
+b10 +
+0%
+1(
+1$
+1&
+#335
+b0 !
+b0 )
+b0 ,
+b11 #
+b11 +
+0(
+#341
+1%
+1'
+#343
+b10 "
+b10 *
+b10 -
+b100 #
+b100 +
+0%
+1(
+#350
+0$
+#372
+0'
+#378
+0&
+#385
+b1 "
+b1 *
+b1 -
+b101 #
+b101 +
+0(
+1$
+#403
+1'
+#405
+b0 "
+b0 *
+b0 -
+b0 #
+b0 +
+1(
+#413
+b10 !
+b10 )
+b10 ,
+b1 #
+b1 +
+0(
+#420
+0$
+#434
+0'
+#441
+1&
+#455
+b1 !
+b1 )
+b1 ,
+b10 #
+b10 +
+1(
+1$
+#465
+1%
+1'
+#475
+b0 !
+b0 )
+b0 ,
+b11 #
+b11 +
+0%
+0(
+#483
+b10 "
+b10 *
+b10 -
+b100 #
+b100 +
+1(
+#490
+0$
+#496
+0'
+#504
+0&
+#525
+b1 "
+b1 *
+b1 -
+b101 #
+b101 +
+0(
+1$
+#527
+1'
+#545
+b0 "
+b0 *
+b0 -
+b0 #
+b0 +
+1(
+#553
+b10 !
+b10 )
+b10 ,
+b1 #
+b1 +
+0(
+#558
+0'
+#560
+0$
+#567
+1&
+#589
+1%
+1'
+#595
+b1 !
+b1 )
+b1 ,
+b10 #
+b10 +
+0%
+1(
+1$
+#615
+b0 !
+b0 )
+b0 ,
+b11 #
+b11 +
+0(
+#620
+0'
+#623
+b10 "
+b10 *
+b10 -
+b100 #
+b100 +
+1(
+#630
+0$
+0&
+#651
+1'
+#665
+b1 "
+b1 *
+b1 -
+b101 #
+b101 +
+0(
+1$
+#682
+0'
+#685
+b0 "
+b0 *
+b0 -
+b0 #
+b0 +
+1(
+#693
+b10 !
+b10 )
+b10 ,
+b1 #
+b1 +
+0%
+0(
+1&
+#700
+0$
+#713
+1%
+1'
+#735
+b1 !
+b1 )
+b1 ,
+b10 #
+b10 +
+0%
+1(
+1$
+#744
+0'
+#755
+b0 !
+b0 )
+b0 ,
+b11 #
+b11 +
+0(
+#756
+0&
+#763
+b10 "
+b10 *
+b10 -
+b100 #
+b100 +
+1(
+#770
+0$
+#775
+1'
+#805
+b1 "
+b1 *
+b1 -
+b101 #
+b101 +
+0(
+1$
+#806
+0'
+#819
+1%
+1&
+#825
+b0 "
+b0 *
+b0 -
+b0 #
+b0 +
+0%
+1(
+#833
+b10 !
+b10 )
+b10 ,
+b1 #
+b1 +
+0(
+#837
+1%
+1'
+#840
+0$
+#868
+0'
+#875
+b1 !
+b1 )
+b1 ,
+b10 #
+b10 +
+0%
+1(
+1$
+#882
+0&
+#895
+b0 !
+b0 )
+b0 ,
+b11 #
+b11 +
+0(
+#899
+1%
+1'
+#903
+b10 "
+b10 *
+b10 -
+b100 #
+b100 +
+0%
+1(
+#910
+0$
+#930
+0'
+#945
+b1 "
+b1 *
+b1 -
+b101 #
+b101 +
+0(
+0%
+1$
+1&
+#961
+1'
+#965
+b0 "
+b0 *
+b0 -
+b0 #
+b0 +
+1(
+#973
+b10 !
+b10 )
+b10 ,
+b1 #
+b1 +
+0(
+#980
+0$
+#992
+0'

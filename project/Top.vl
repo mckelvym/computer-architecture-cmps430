@@ -1,0 +1,142 @@
+// Class    : CMPS 430
+// Section  : 001
+// Problem  : Verilog Group Project
+
+// Name     : McKelvy, James Markus
+// Name     : Zhang, William
+// CLID     : jmm0468
+// CLID     : wxz1067
+
+// The name of the file containing this code is Top.vl
+
+
+// Filename: Top.vl
+
+module Top();
+
+reg switch = 1;			// signal to switch light states
+reg cars = 0;			// signal of car buildup
+reg speeder_ew = 0;		// signal of a speeder on ew light
+reg speeder_ns = 0;		// signal of a speeder on ns light
+reg speeder = 1'b0;		// signal that we need to capture speeder info
+wire [2:0] state;		// state of the lights
+wire [1:0] ew_light;	// state of the ew light
+wire [1:0] ns_light;	// state of the ns light
+
+// this is the light module that changes states when it detects a change in
+// the "switch" signal
+newtrafficfsm myfsm(switch, state, ew_light, ns_light);
+
+// start the initial lights switching
+initial
+begin
+	switch = ~switch;	
+end
+
+// send a cars buildup signal every 35 time units
+initial
+begin
+	forever #35 cars = ~cars;
+end
+
+// send a speeder through ew every 63 time units
+initial
+begin
+	forever #63 speeder_ew = ~speeder_ew;
+end
+
+// send a speeder through ns every 31 time units
+initial
+begin
+	forever #31 speeder_ns = ~speeder_ns;
+end
+
+// this defines the time interval between the different stages
+// of the light cycle
+always @(posedge switch or negedge switch)
+begin: clock
+if((state == 3'b000) | (state == 3'b011))
+begin
+// both are red
+	#5
+	switch = ~switch;
+end
+
+if((state == 3'b001) | (state == 3'b100))
+begin
+// one is red, one is green
+	#20
+	switch = ~switch;
+end
+
+if((state == 3'b010) | (state == 3'b101))
+begin
+// one is red, one is yellow
+	#8
+	switch = ~switch;
+end
+
+end
+
+// everytime the lights are changed, the speeder flag is reset
+// so that it can be raised later
+always @(posedge switch or negedge switch)
+begin: reset_speeder
+if(speeder == 1'b1)
+begin
+	speeder = 1'b0;
+end
+end
+
+// this is evaulated when the cars sensor is set off, too many cars
+// are waiting
+always @(posedge cars)
+begin: cars_sensor
+// if we are in a special state of one light green and the other
+// is red, then we signal the lights to begin cycling
+if(state == 3'b001)
+begin
+	switch = ~switch;
+end
+// if we are in a special state of one light green and the other
+// is red, then we signal the lights to begin cycling
+if(state == 3'b100)
+begin
+	switch = ~switch;
+end
+end
+
+// if there is a speeder signal on the ew light
+// then we raise the signal to capture the speeder information
+always @(posedge speeder_ew)
+begin: speeder_on_ew
+// if this light is red, then there really was a speeder
+if(ew_light == 2'b00)
+begin
+	speeder = 1'b1;
+end
+end
+
+// if there is a speeder signal on the ns light
+// then we raise the signal to capture the speeder information
+always @(posedge speeder_ns)
+begin: speeder_on_ns
+// if this light is red, then there really was a speeder
+if(ns_light == 2'b00)
+begin
+	speeder = 1'b1;
+end
+end
+
+
+// output the values of the variables
+initial
+	begin
+	$monitor("Switch=%1b, Cars=%1b, State=%2b, EW=%2b, NS=%2b, Speeder=%1b, time=%t\n", switch, cars, state, ew_light, ns_light, speeder, $time);	
+	$dumpfile("Top.dump");
+   	$dumpvars(7, Top);
+	// quit the program after this much time
+	#1000 $finish;
+end
+
+endmodule

@@ -1,0 +1,137 @@
+Microsoft Windows XP [Version 5.1.2600]
+(C) Copyright 1985-2001 Microsoft Corp.
+
+VCD info: dumpfile Top.dump opened for output.
+Switch=0, Cars=0, State=001, EW=10, NS=00, Speeder=0, time=                   0
+
+Switch=0, Cars=0, State=001, EW=10, NS=00, Speeder=1, time=                  31
+
+Switch=1, Cars=1, State=010, EW=01, NS=00, Speeder=0, time=                  35
+
+Switch=0, Cars=1, State=011, EW=00, NS=00, Speeder=0, time=                  55
+
+Switch=1, Cars=1, State=100, EW=00, NS=10, Speeder=0, time=                  63
+
+Switch=1, Cars=0, State=100, EW=00, NS=10, Speeder=0, time=                  70
+
+Switch=0, Cars=1, State=101, EW=00, NS=01, Speeder=0, time=                 105
+
+Switch=1, Cars=1, State=000, EW=00, NS=00, Speeder=0, time=                 125
+
+Switch=0, Cars=1, State=001, EW=10, NS=00, Speeder=0, time=                 133
+
+Switch=0, Cars=0, State=001, EW=10, NS=00, Speeder=0, time=                 140
+
+Switch=0, Cars=0, State=001, EW=10, NS=00, Speeder=1, time=                 155
+
+Switch=1, Cars=1, State=010, EW=01, NS=00, Speeder=0, time=                 175
+
+Switch=0, Cars=1, State=011, EW=00, NS=00, Speeder=0, time=                 195
+
+Switch=1, Cars=1, State=100, EW=00, NS=10, Speeder=0, time=                 203
+
+Switch=1, Cars=0, State=100, EW=00, NS=10, Speeder=0, time=                 210
+
+Switch=0, Cars=1, State=101, EW=00, NS=01, Speeder=0, time=                 245
+
+Switch=1, Cars=1, State=000, EW=00, NS=00, Speeder=0, time=                 265
+
+Switch=0, Cars=1, State=001, EW=10, NS=00, Speeder=0, time=                 273
+
+Switch=0, Cars=1, State=001, EW=10, NS=00, Speeder=1, time=                 279
+
+Switch=0, Cars=0, State=001, EW=10, NS=00, Speeder=1, time=                 280
+
+Switch=1, Cars=1, State=010, EW=01, NS=00, Speeder=0, time=                 315
+
+Switch=0, Cars=1, State=011, EW=00, NS=00, Speeder=0, time=                 335
+
+Switch=0, Cars=1, State=011, EW=00, NS=00, Speeder=1, time=                 341
+
+Switch=1, Cars=1, State=100, EW=00, NS=10, Speeder=0, time=                 343
+
+Switch=1, Cars=0, State=100, EW=00, NS=10, Speeder=0, time=                 350
+
+Switch=0, Cars=1, State=101, EW=00, NS=01, Speeder=0, time=                 385
+
+Switch=1, Cars=1, State=000, EW=00, NS=00, Speeder=0, time=                 405
+
+Switch=0, Cars=1, State=001, EW=10, NS=00, Speeder=0, time=                 413
+
+Switch=0, Cars=0, State=001, EW=10, NS=00, Speeder=0, time=                 420
+
+Switch=1, Cars=1, State=010, EW=01, NS=00, Speeder=0, time=                 455
+
+Switch=1, Cars=1, State=010, EW=01, NS=00, Speeder=1, time=                 465
+
+Switch=0, Cars=1, State=011, EW=00, NS=00, Speeder=0, time=                 475
+
+Switch=1, Cars=1, State=100, EW=00, NS=10, Speeder=0, time=                 483
+
+Switch=1, Cars=0, State=100, EW=00, NS=10, Speeder=0, time=                 490
+
+Switch=0, Cars=1, State=101, EW=00, NS=01, Speeder=0, time=                 525
+
+Switch=1, Cars=1, State=000, EW=00, NS=00, Speeder=0, time=                 545
+
+Switch=0, Cars=1, State=001, EW=10, NS=00, Speeder=0, time=                 553
+
+Switch=0, Cars=0, State=001, EW=10, NS=00, Speeder=0, time=                 560
+
+Switch=0, Cars=0, State=001, EW=10, NS=00, Speeder=1, time=                 589
+
+Switch=1, Cars=1, State=010, EW=01, NS=00, Speeder=0, time=                 595
+
+Switch=0, Cars=1, State=011, EW=00, NS=00, Speeder=0, time=                 615
+
+Switch=1, Cars=1, State=100, EW=00, NS=10, Speeder=0, time=                 623
+
+Switch=1, Cars=0, State=100, EW=00, NS=10, Speeder=0, time=                 630
+
+Switch=0, Cars=1, State=101, EW=00, NS=01, Speeder=0, time=                 665
+
+Switch=1, Cars=1, State=000, EW=00, NS=00, Speeder=0, time=                 685
+
+Switch=0, Cars=1, State=001, EW=10, NS=00, Speeder=0, time=                 693
+
+Switch=0, Cars=0, State=001, EW=10, NS=00, Speeder=0, time=                 700
+
+Switch=0, Cars=0, State=001, EW=10, NS=00, Speeder=1, time=                 713
+
+Switch=1, Cars=1, State=010, EW=01, NS=00, Speeder=0, time=                 735
+
+Switch=0, Cars=1, State=011, EW=00, NS=00, Speeder=0, time=                 755
+
+Switch=1, Cars=1, State=100, EW=00, NS=10, Speeder=0, time=                 763
+
+Switch=1, Cars=0, State=100, EW=00, NS=10, Speeder=0, time=                 770
+
+Switch=0, Cars=1, State=101, EW=00, NS=01, Speeder=0, time=                 805
+
+Switch=0, Cars=1, State=101, EW=00, NS=01, Speeder=1, time=                 819
+
+Switch=1, Cars=1, State=000, EW=00, NS=00, Speeder=0, time=                 825
+
+Switch=0, Cars=1, State=001, EW=10, NS=00, Speeder=0, time=                 833
+
+Switch=0, Cars=1, State=001, EW=10, NS=00, Speeder=1, time=                 837
+
+Switch=0, Cars=0, State=001, EW=10, NS=00, Speeder=1, time=                 840
+
+Switch=1, Cars=1, State=010, EW=01, NS=00, Speeder=0, time=                 875
+
+Switch=0, Cars=1, State=011, EW=00, NS=00, Speeder=0, time=                 895
+
+Switch=0, Cars=1, State=011, EW=00, NS=00, Speeder=1, time=                 899
+
+Switch=1, Cars=1, State=100, EW=00, NS=10, Speeder=0, time=                 903
+
+Switch=1, Cars=0, State=100, EW=00, NS=10, Speeder=0, time=                 910
+
+Switch=0, Cars=1, State=101, EW=00, NS=01, Speeder=0, time=                 945
+
+Switch=1, Cars=1, State=000, EW=00, NS=00, Speeder=0, time=                 965
+
+Switch=0, Cars=1, State=001, EW=10, NS=00, Speeder=0, time=                 973
+
+Switch=0, Cars=0, State=001, EW=10, NS=00, Speeder=0, time=                 980
